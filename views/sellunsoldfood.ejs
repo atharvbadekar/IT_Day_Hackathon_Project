@@ -1,0 +1,39 @@
+<%- include('partials/header2') %>
+
+    <h5 class="text-center">Add Food Details to Sell</h5>
+
+    <form action="/sellunsoldfood" method="POST" enctype="multipart/form-data">
+      <label for="hotelName">Hotel Name:</label>
+      <input type="text" id="hotelName" name="hotelName" required>
+      
+      <label for="foodName">Food Name:</label>
+      <input type="text" id="foodName" name="foodName" required>
+      
+      <label for="foodType">Food Type:</label>
+      <input type="text" id="foodType" name="foodType" required>
+      
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" required>
+      
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" required>
+
+      <label for="discount">Discount %:</label>
+      <input type="text" id="discount" name="discount" required>
+      
+      <button type="submit">Submit</button>
+    </form>
+
+<% if (typeof success !== 'undefined') { %>
+  <% if (success) { %>
+    <p>Food details added successfully!</p>
+  <% } else { %>
+    <p>Failed to add food details.</p>
+  <% } %>
+<% } %>
+
+
+
+    
+</body>
+</html>

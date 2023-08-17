@@ -1,0 +1,75 @@
+<%- include('partials/header2') %>
+
+<div class="afood">
+
+<h1 class="text-center">Available Food</h1>
+
+<div class="search text-center">
+
+  <input type="text" id="searchInput" class="text-center" style="margin-left: 600px;" placeholder="Search by City Name...">
+  <button onclick="searchFood()">Search</button>
+
+</div>
+
+<h2 class="text-center">Food Details</h2>
+
+<% food.forEach(function(item) { %>
+  <div class="food-Detail text-center">
+    <div class="food-Detail__header">
+      
+ 
+    
+        <h5 class="food-Detail__label">Food Name: <%= item.foodName %></h5>
+        
+     
+        <h5 class="food-Detail__label">Donor Name: <%= item.donorName %></h5>
+        
+
+        <h5 class="food-Detail__label">Food Type: <%= item.foodType %></h5>
+        
+
+        <h5 class="food-Detail__label">Expiry Date: <%= item.expiryDate %></h5>
+        
+   
+        <h5 class="food-Detail__label">Quantity: <%= item.quantity %></h5>
+        
+   
+        <h5 class="food-Detail__label">City Name: <%= item.cityName %></h5>
+        
+      </div>
+
+
+      <div class="2">
+      <div class="food-Detail__row">
+        <span class="food-Detail__label">Location:</span>
+        <a href="<%= item.location %>" class="food-Detail__link">Click to go <i class="fa-sharp fa-solid fa-location-dot"></i></a>
+      </div>
+    </div>
+
+
+    </div>
+
+  </div>
+
+ 
+
+<% }) %>
+
+<script>
+function searchFood() {
+  var input, filter, foodDetails, cityName, i;
+  input = document.getElementById("searchInput");
+  filter = input.value.toUpperCase();
+  foodDetails = document.getElementsByClassName("food-Detail");
+  for (i = 0; i < foodDetails.length; i++) {
+    cityName = foodDetails[i].getElementsByTagName("p")[5];
+    if (cityName.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      foodDetails[i].style.display = "";
+    } else {
+      foodDetails[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+<%- include('partials/footer') %>

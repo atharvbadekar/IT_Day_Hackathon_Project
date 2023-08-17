@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+
+<div class="divfood">
+
+    <h2 class="mar">Available Animal Food is</h2>
+
+    <input class="mar" type="text" id="searchInput" placeholder="Search by City Name...">
+    <button class="btn2 mar" style="color: white; font-weight: 700; width: 130px; height: 40px; border-radius: 20px;" onclick="searchFood()">Search</button>
+
+
+</div>
+    <% Animalfd.forEach(function(item) { %>
+        <div class="food-Detail">
+          <h6>Hotel Name : <%= item.hotelName %></h6>
+          <h6>City Name : <%= item.cityName %></h6>
+          <a href="<%= item.location %>">Click<i class="fa-sharp fa-solid fa-location-dot"></i></a>
+        </div>
+      <% }) %>
+    
+    <script>
+        function searchFood() {
+            var input, filter, foodDetails, cityName, i;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            foodDetails = document.getElementsByClassName("food-Detail");
+            for (i = 0; i < foodDetails.length; i++) {
+                cityName = foodDetails[i].getElementsByTagName("h6")[1];
+                if (cityName.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    foodDetails[i].style.display = "";
+                } else {
+                    foodDetails[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

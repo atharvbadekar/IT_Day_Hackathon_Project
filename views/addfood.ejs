@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+   
+    <h3 class="text-center">Add Food Details</h3>
+	<form action="/addfood" method="POST">
+
+		<label for="donorName">Enter Your Name:</label>
+		<input type="text" id="donorName" name="donorName" required><br>
+	  
+		<label for="foodName">Food Name:</label>
+		<input type="text" id="foodName" name="foodName" required><br>
+	  
+		<label for="foodType">Food Type:</label>
+		<input type="text" id="foodType" name="foodType" required><br>
+	  
+		<label for="expiryDate">Expiry Date:</label>
+		<input type="date" id="expiryDate" name="expiryDate" required><br>
+	  
+		<label for="quantity">Quantity: No Of Person</label>
+		<input type="number" id="quantity" name="quantity" required><br>
+
+		<label for="citynm">City Name:</label>
+		<input type="text" id="citynm" name="citynm" required><br>
+	  
+		<a onclick="getLocation()" style="color: rgb(53, 53, 237); font-weight: 700;">Click Here To Get Your Location<i class="fa-sharp fa-solid fa-location-dot"></i></a>
+		<input type="hidden" id="location" name="location">
+		<!-- <input type="hidden" id="lon" name="lon"> -->
+	  
+		<button type="submit" class="btn btn-dark btn2">Add Food</button>
+	  </form>
+
+	  <% if (success) { %>
+		<div class="alert alert-success" role="alert">
+		  Food added successfully!
+		</div>
+	  <% } %>
+	  
+	  <script>
+	  function getLocation() {
+		if (navigator.geolocation) {
+		  navigator.geolocation.getCurrentPosition(showPosition);
+		} else {
+		  alert("Geolocation is not supported by this browser.");
+		}
+	  }
+	  
+	  function showPosition(position) {
+		var lat = position.coords.latitude;
+		var lon = position.coords.longitude;
+		var googleMapsLink = "https://www.google.com/maps/search/?api=1&query=" + lat + "," + lon;
+		var mapButton = document.createElement("a");
+		mapButton.href = googleMapsLink;
+		mapButton.target = "_blank";
+		mapButton.innerText = "Success! we got You Location click Add food";
+		document.body.appendChild(mapButton);
+	  
+		// set the lat and lon values in the hidden input fields
+		document.getElementById("location").value = googleMapsLink;
+		// document.getElementById("lon").value = lon;
+	  }
+	  </script>
+<%- include('partials/footer') %>

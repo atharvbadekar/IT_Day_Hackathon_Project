@@ -1,0 +1,659 @@
+.food-Detail{
+   
+        margin: 5% 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+      
+
+}
+
+.header{
+ height: 400px;
+ width: 100%;
+ background: rgb(2,0,36);
+ background-image: linear-gradient(to right, #120029, #1d0b3f, #2e0d55, #430a6a, #5b007f);
+}
+
+ul.nav {
+        margin:0;
+        padding:0;
+        list-style:none;
+        height:36px; line-height:36px;
+        /* background:#0d7963; you can change the backgorund color here. */
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:20px;
+        margin-top: 5px;
+    }
+    ul.nav li {
+        /* border-right:1px solid #189b80; you can change the border color matching to your background color */
+        float:left;
+    }
+    ul.nav a {
+        display:block;
+        padding:0 28px;
+        color:#ccece6;
+        text-decoration:none;
+    }
+ 
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
+    .title{
+     margin: 150px;
+    }
+
+    .content{
+        height: 70%;
+        width: 100%;
+        background-color: red;
+    }
+
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+        
+    }
+
+    .buttons a{
+        width: 100px;
+        margin: 50px;
+    }
+
+
+    .collapsible {
+        background-color: #def3f9;
+        color: #000000;
+        cursor: pointer;
+        padding: 18px;
+        width: 80%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        border-radius: 10px;
+      }
+
+
+      .content {
+        margin-top: 20px;
+        margin-left: 140px;
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        width: 80%;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+      }
+
+      /* .nav a{
+        font-weight:600;
+        font-size: 15px;
+      } */
+
+      .btnn{
+        background-color: #f74dda;
+      }
+
+      /* .main{
+        width: 100%;
+        height: 600px;
+      } */
+
+      .main{
+        margin: 0 150px;
+      }
+
+
+
+      footer {
+        text-align: center;
+        padding: 3px;
+        background: rgb(2,0,36);
+ background-image: linear-gradient(to right, #120029, #1d0b3f, #2e0d55, #430a6a, #5b007f);
+        color: white;
+        width: 100%;
+        height: 100px;
+      }
+
+      .container{
+       margin-left: 400px;
+       width: 500px;
+   
+      }
+
+
+      .btn2{
+        background: rgb(2,0,36);
+        background-image: linear-gradient(to right, #120029, #1d0b3f, #2e0d55, #430a6a, #5b007f);
+        
+      }
+
+      .btn1{
+       border-color: #1d0b3f;
+      }
+   
+
+      .head2{
+        height: 50px;
+        background: rgb(2,0,36);
+        background-image: linear-gradient(to right, #120029, #1d0b3f, #2e0d55, #430a6a, #5b007f);
+     
+
+      }
+
+      /* card */
+
+      .card {
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 100px;
+      }
+      
+      /* On mouse-over, add a deeper shadow */
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      
+      /* Add some padding inside the card container */
+      /* .container {
+        padding: 2px 16px;
+      } */
+
+      .organization{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: #000000 1px 1px 1px 1px ;
+        width: 220px;
+    
+      }
+
+      img{
+        height: 220px;
+        width: 220px;
+      }
+
+      .orgdiv{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+
+/* stylnig for add food detail from donor */
+
+/* Style the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* Style the input fields */
+label, input {
+  display: block;
+  width: 300px;
+  margin-bottom: 5px;
+}
+
+input[type="submit"] {
+  margin-top: 5px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Style the "Get my location" link */
+a {
+  margin-bottom: 5px;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Style the success message */
+.alert-success {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #dff0d8;
+  color: #3c763d;
+  border: 1px solid #d6e9c6;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+
+
+.addfood{
+  height: 200px;
+
+}
+
+
+
+/* availablefood */
+
+.food-Detail {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 500px;
+  margin-left: 500px;
+}
+
+.food-Detail__header {
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.food-Detail__label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.food-Detail__value {
+  margin-right: 15px;
+}
+
+.food-Detail__row {
+  display: flex;
+  align-items: center;
+}
+
+.food-Detail__link {
+  display: flex;
+  align-items: center;
+}
+
+.food-Detail__link i {
+  margin-left: 5px;
+}
+
+i{
+  font-size: 50px;
+}
+
+
+.qoute{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.animal{
+
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.food-Detail{
+  display: flex;
+  flex-direction: column;
+  height: 170px;
+  width: 500px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.divfood{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.mar{
+  margin: 10px;
+}
+
+.btns{
+display: flex;
+flex-direction: column;
+align-items: center;
+color: white;
+}
+
+.btns button{
+  display: inline-block;
+  color: white;
+  border-radius: 20px;
+  font-weight: 600;
+  border: none;
+  background: rgb(2,0,36);
+  background-image: linear-gradient(to right, #120029, #1d0b3f, #2e0d55, #430a6a, #5b007f);
+  width: 400px;
+  height: 50px;
+  margin: 20px;
+  color: white;
+  
+
+}
+
+.btns button:hover{
+  background: rgb(41, 37, 111);
+  background-image: linear-gradient(to right, #120029, #1d0b3f, #2e0d55, #430a6a, #5b007f);
+
+}
+
+.par{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 100px;
+  border-radius: 20px;
+  margin: 100px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 450px;
+
+}
+
+.aniimages{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.head2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-style:normal;
+}
+
+
+
+
+
+
+
+
+
+
+/* food to sell  */
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"], input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="file"]:focus {
+  outline: none;
+  border-color: #6c63ff;
+}
+
+button[type="submit"] {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #5245cc;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.food-Detail__header{
+  width: 500px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+.reg-box{
+
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 600px;
+
+
+}
+
+.log-pg{
+  
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 600px;
+
+
+
+}
+
+
+.reg-box2{
+
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 600px;
+  margin-top: 200px;
+
+
+}
+
+
+/* home page  */
+
+.box1{
+  display: flex;
+  margin: 10px 100px;
+  justify-content: space-between;
+
+}
+
+.box2{
+  width: 50%;
+  margin: 10px;
+}
+
+.box3{
+  width: 50%;
+  margin: 10px;
+}
+
+.box4{
+  display: flex;
+  margin: 10px 100px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.box5{
+  width: 50%;
+  margin: 10px; ;
+}
+.box6{
+  width: 50%;
+  margin: 10px; ;
+}
+
+
+.pimg{
+  display: flex;
+  margin: 10px 170px;
+
+}
+
+.imgg{
+  width: 10%;
+
+}
+
+.ppp{
+  width: 90%;
+}
+
+.ppp p{
+  font-weight: bold;
+  margin: 30px;
+  font-size: 18px;
+ 
+
+}
+
+
+/* footer */
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666;
+  margin: 0;
+}
+
+.footer-content a {
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+textarea {
+  height: 150px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+a{
+  text-decoration: none;
+}
